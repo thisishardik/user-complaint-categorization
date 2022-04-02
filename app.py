@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 import yake
 
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+# from flask_cors import CORS
 
 from helpers.category import fetch_categories_map
 from helpers.yake import keyword_extraction_yake, sentence_tokenizer, generate_kw_info_from_kw_snt
@@ -13,9 +13,9 @@ from helpers.yake import keyword_extraction_yake, sentence_tokenizer, generate_k
 nltk.download('punkt')
 
 app = Flask(__name__)
-cors = CORS(app)
+# cors = CORS(app)
 
-app.config['CORS_HEADERS'] = 'Content-Type'
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 def cos_similarity(Y):
